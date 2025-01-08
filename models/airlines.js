@@ -2,16 +2,20 @@ const {Sequelize, DataTypes} = require('sequelize');
 const { db } = require('../config/database');
 
 
-const Airline = db.define('Airline', {
-    airlineName: {
+const airline = db.define('airline', {
+    airline_name: {
         type: DataTypes.STRING,
         allowNull: false,
     },
-    iataCode: {
+    local_language_airline_name:{
+        type: DataTypes.STRING,
+        allowNull: true
+    },
+    iata_code: {
         type: DataTypes.STRING,
         allowNull: true,
     },
-    icaoCode: {
+    icao_code: {
         type: DataTypes.STRING,
         allowNull: true
     },
@@ -19,11 +23,32 @@ const Airline = db.define('Airline', {
         type: DataTypes.STRING,
         allowNull: false
     },
+    commenced_ops: {
+        type: DataTypes.INTEGER,
+        allowNull: true
+    },
     country: {
         type: DataTypes.STRING,
         allowNull: false
     },
+    region: {
+        type: DataTypes.STRING,
+        allowNull: false,
+    },
+    flag: {
+        type: DataTypes.STRING,
+        allowNull: false
+    },
+    headquarters: {
+        type: DataTypes.STRING,
+        allowNull: true
+    },
+    notes:{
+        type: DataTypes.STRING,
+        allowNull: true
+    }
+
 })
 
 
-module.exports = {Airline}
+module.exports = {airline}

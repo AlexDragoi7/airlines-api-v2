@@ -4,6 +4,7 @@ const express = require('express');
 const app = express();
 const PORT = process.env.PORT || 3000;
 const db = require('./config/database');
+const local_db = require('./config/local_mysql')
 const airlineRoutes = require('./routes/airlineRoutes');
 
 
@@ -23,3 +24,6 @@ app.listen(PORT, () => {
 })
 
 connect()
+// local_db.createTable() - enable to create the table
+// local_db.dropTable() - enable to delete the entire table
+
