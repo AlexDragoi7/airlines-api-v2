@@ -7,10 +7,6 @@ const airline = db.define('airline', {
         type: DataTypes.STRING,
         allowNull: false,
     },
-    local_language_airline_name:{
-        type: DataTypes.STRING,
-        allowNull: true
-    },
     iata_code: {
         type: DataTypes.STRING,
         allowNull: true,

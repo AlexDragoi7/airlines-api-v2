@@ -24,6 +24,6 @@ app.listen(PORT, () => {
 })
 
 connect()
-// local_db.createTable() - enable to create the table
-// local_db.dropTable() - enable to delete the entire table
-
+// local_db.createTable()// - enable to create the table
+// local_db.dropTable()  // - enable to delete the entire table
+// RUN NPM START to start the server - script mentioned in package.json file

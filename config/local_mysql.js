@@ -23,7 +23,7 @@ function testConnection(){
 
 function createTable(){
     if (local_db){
-        local_db.query(`CREATE TABLE IF NOT EXISTS ${process.env.DB_TABLE} (ID INT PRIMARY KEY NOT NULL AUTO_INCREMENT, airline_name VARCHAR(100), local_language_airline_name VARCHAR(100),iata_code VARCHAR(5), icao_code VARCHAR(5), callsign VARCHAR(100),commenced_ops INT NOT NULL, country VARCHAR(100), region VARCHAR(30), flag VARCHAR(10), headquarters VARCHAR(100), notes VARCHAR(200));`);
+        local_db.query(`CREATE TABLE IF NOT EXISTS ${process.env.DB_TABLE} (ID INT PRIMARY KEY NOT NULL AUTO_INCREMENT, airline_name VARCHAR(100), iata_code VARCHAR(5), icao_code VARCHAR(5), callsign VARCHAR(100),commenced_ops INT NOT NULL, country VARCHAR(100), region VARCHAR(30), flag VARCHAR(150), headquarters VARCHAR(100), notes VARCHAR(200));`);
         console.log(`Table ${process.env.DB_TABLE} was successfully created`);
     }else{
         console.error(`Could not create ${process.env.DB_TABLE} table`);
